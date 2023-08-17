@@ -1,0 +1,23 @@
+.nav{
+    border-bottom: 1px solid var(--yellow);
+    /* width: 100% !important; */
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.mobileItem{
+    transition: 1s cubic-bezier(0, 0, 0.165, 1);
+}
+@media screen and (max-width: 600px){
+    .container{
+        display: flex;
+        align-items: center;
+    }
+}

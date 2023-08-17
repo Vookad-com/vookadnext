@@ -1,0 +1,147 @@
+.login{
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginContainer{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    max-width: 80rem;
+    padding: .5rem;
+    gap: 1rem;
+}
+.loginContainer > div{
+    flex:50%;
+    width: 100%;
+    max-width: 30rem;
+}
+
+.loginContainer h2{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: var(--spacing);
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.card2{
+    border-radius: 25px;
+    padding: 2rem 1rem;
+}
+.card2 .heading{
+    border-bottom: 2px solid #fff;
+    padding: .5rem 0;
+}
+.card2 h3{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: var(--fontsize);
+}
+
+.card2 ol{
+    margin: 1rem 0;
+
+}
+
+.card2 ol li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0;
+}
+
+.cta2{
+    padding: 3%;
+    font: 1em 600;
+    width: 100%;
+    margin-top: 5rem;
+    color: #000;
+}
+.logSign{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    min-width: 25rem;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+    margin: 2rem auto;
+    touch-action: none;
+}
+.logSign > *{
+    z-index: 9;
+}
+.slider{
+    position: absolute;
+    background-color: var(--pink);
+    border-radius: 600px;
+    width: 52%;
+    height: 2.5rem;
+    z-index: 0;
+    transition: ease-in-out .5s;
+}
+.phone{
+    color: #fff !important;
+    width: 100%;
+}
+.phone *{
+    color: #fff !important;
+}
+.phone *::before, .phone *::after{
+    border-bottom: 1px solid #fff !important;
+}
+.loginBox{
+    background-color: #141414;
+    border-radius: 25px;
+    padding: 1.5rem;
+}
+.loginBox h2{
+    color: var(--yellow);
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.loginForm button{
+    background-color: var(--yellow);
+    border-radius: 600px;
+    width: 100%;
+    margin: .75rem 0;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    padding: .5rem;
+}
+.counter{
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: .8rem;
+    text-decoration: underline;
+}
+
+.disable{
+    color: #afafaf !important;
+    text-decoration: none;
+}
+.captcha{
+
+    display: inherit;
+    visibility: hidden;
+
+}
+@media screen and (max-width: 1000px){
+    .prompt{
+        display: none;
+    }
+    .logSign{
+        min-width: unset;
+        width: 100%;
+    }
+}

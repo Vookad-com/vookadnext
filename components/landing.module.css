@@ -1,0 +1,317 @@
+
+.Hero{
+    /* height: 80vh; */
+    margin: auto;
+    max-width: 80rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.heroContainer{
+    border-radius: 25px;
+    background-color: antiquewhite;
+    overflow: hidden;
+    background-image: url('/assets/naan.webp');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+
+.heroContent{
+    width: 60%;
+    padding: 5%;
+    background-image: url('/assets/pinkGola.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.heroContent h1{
+    font-size: var(--big);
+    line-height: var(--big);
+    letter-spacing: var(--spacing);
+    font-weight: 900;
+}
+
+.heroContent h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-top: 2rem;
+}
+.checkout{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color: rgba(0,0,0, .8);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    width: 95%;
+    max-width: 40rem;
+}
+.formField{
+    color: #fff !important;
+    width: 100%;
+}
+.formField *{
+    color: #fff !important;
+}
+.formField *::before, .formField *::after{
+    border-bottom: 1px solid #fff !important;
+}
+
+@media screen and (max-width: 1000px){
+    .heroContent{
+        background-size: 100% 155%;
+        background-position: center center;
+    }
+    .heroContainer{
+        background-size: 100% 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .heroContent{
+        width: 100%;
+        height: 60vh;
+        background-size: 100% 100%;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url('/assets/chotagola.svg');
+    }
+    .heroContainer{
+        background-size: 150% auto;
+        background-position: top;
+    }
+  }  
+
+.cta{
+    padding: 3%;
+    font: 1em 600;
+    margin-top: 2rem;
+    color: #000;
+}
+.about{
+    width: 100%;
+    padding: 2rem;
+}
+.aboutContainer{
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.aboutCard1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--yellow);
+    gap: 5rem;
+    margin: 1rem auto;
+}
+
+.aboutCard2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    color: var(--pink);
+    gap: 5rem;
+    margin: 1rem auto;
+}
+.content{
+    flex: 50%;
+}
+
+.content h2{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: var(--spacing);
+    line-height: var(--fontsize);
+}
+
+.content p{
+    color: #fff;
+    margin-top: 2rem;
+}
+.imgContainer{
+    flex: 50%;
+    height: 100%;
+}
+.imgContainer img{
+    border-radius: 25px;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px){
+    .aboutCard1{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .aboutCard2{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .imgContainer img{
+        width: 100%;
+        height: auto;
+    }
+  }
+
+.diff{
+    width: 100%;
+    padding: 2rem;
+}
+.diffContainer{
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.diffContainer h2{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: var(--spacing);
+    line-height: var(--fontsize);
+    color: var(--yellow);
+    margin: 1rem 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card img{
+    width: 50px;
+    height: 50px;
+}
+
+.card h3{
+    font-size: 1.3rem;
+    color: var(--yellow);
+    letter-spacing: -1px;
+}
+
+.smCards{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .cards{
+        display: none;
+    }
+    .smCards{
+        display: block;
+    }
+    .card{
+        margin-bottom: 1rem;
+    }
+    
+  }
+
+.plans{
+    width: 100%;
+    padding: 2rem;
+}
+.plansContainer{
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.plansContainer h2{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: var(--spacing);
+    color: var(--yellow);
+    margin: 1rem 0;
+}
+
+.card2{
+    background-color: #1E1E1E;
+    border-radius: 25px;
+    padding: 2rem 1rem;
+}
+.card2 .heading{
+    border-bottom: 2px solid #fff;
+    padding: .5rem 0;
+}
+.card2 h3{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: var(--fontsize);
+}
+
+.card2 ol{
+    margin: 1rem 0;
+
+}
+
+.card2 ol li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0;
+}
+
+.cta2{
+    padding: 3%;
+    font: 1em 600;
+    width: 100%;
+    margin-top: 5rem;
+    color: #000;
+}
+
+.faq{
+    width: 100%;
+    padding: 2rem;
+}
+.faqContainer{
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.faqContainer h2{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: var(--spacing);
+    color: var(--yellow);
+    margin: 1rem 0;
+}
+
+.faqItem{
+    background-color: #000 !important;
+    color: #fff !important;
+    border-bottom: #fff 2px solid !important;
+    padding: 1rem !important;
+}
+
+.end{
+    width: 100%;
+    padding: 2rem;
+}
+.endContainer{
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.endContainer h2{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: var(--spacing);
+    color: var(--yellow);
+    margin: 1rem 0;
+}

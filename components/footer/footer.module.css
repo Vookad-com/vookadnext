@@ -1,0 +1,117 @@
+.footerContainer{
+    width: 95%;
+    max-width: 90rem;
+    margin: auto;
+}
+
+.siteCol h4{
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: var(--yellow);
+    margin: 1rem 0;
+}
+
+.siteCol li{
+    margin: .5rem 0;
+}
+
+.connect h4{
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: var(--yellow);
+    margin: 1rem 0;
+}
+
+.connect li{
+    background-color: var(--pink);
+    border-radius: 600px;
+    /* padding: 5px; */
+    width: 2.1rem;
+    height: 2.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.copyright img{
+    flex: 2%;
+    height: 3rem;
+    padding: 5px;
+}
+.copyright > div{
+    flex: 40%;
+}
+.terms {
+    flex: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 320px;
+}
+
+.Flex {
+    display: flex;
+    flex-direction: row;
+    color: var(--yellow);
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Flexitem {
+    flex: 1 1 auto;
+    position: relative;
+    text-align: center;
+}
+
+.Flexitem + .Flexitem {
+    border-left: solid 1px var(--yellow);
+}
+
+/** Optional for OPs exact layout */
+
+.Flexitem:first-child {
+    text-align: left;
+}
+
+.Flexitem:last-child {
+    text-align: right;
+}
+
+@media screen and (max-width: 900px) {
+    .copyright img{
+        flex: 25%;
+        height: 3rem;
+        padding: 5px;
+    }
+    .copyright > div{
+        flex: 75%;
+    }
+    .terms {
+        flex: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        width: 320px;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    .Flexitem {
+    flex: 50%;
+    text-align: center!important;
+    color: var(--pink);
+}
+    .Flexitem:nth-child(3){
+        border: none;
+    }
+  }

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900;600&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --yellow: #F8EA65;
+  --pink: #F178B6;
+  --fontsize: 3.5rem;
+  --big: 4rem;
+  --spacing: -3px;
+  --swiper-theme-color: #F8EA65 !important;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+footer{
+  background-color: #1E1E1E;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px){
+  :root {
+    --fontsize: 3rem;
+    --big: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 550px){
+  :root {
+    --fontsize: 2rem;
+    --big: 2rem;
+    --spacing: -2px;
+  }
+
+  
+  .swiper-pagination-bullet{
+    background: #fff!important;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background: var(--yellow)!important;
+    width: 1.5rem !important;
+    border-radius: 600px !important;
+  }
+}
