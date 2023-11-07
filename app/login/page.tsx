@@ -120,7 +120,6 @@ function LoginBox(){
           // ...
         });
       } else{
-        alert("working")
         signInWithRedirect(auth, provider)
         .then(googlecallback).catch((error) => {
           // Handle Errors here.

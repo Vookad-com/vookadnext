@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/header/header'
 import styles from '@/components/landing.module.css'
@@ -168,31 +168,56 @@ function FAQAcc() {
   );
 }
 
+// const oldbanner = <div className={styles.heroContainer}>
+// <div className={styles.heroContent}>
+//   <h1>
+//   Get <br />
+//   Weekend <br />
+//   Special at ₹69 
+//   </h1>
+//   <h4>
+//     Craving something new every day? Vookad constantly introduces new chefs and dishes, so you&apos;ll never run out of delectable options.
+//   </h4>
+//   <Button onClick={} className={`rounded-full bg-yellow ${styles.cta}`}>
+//     Buy Now
+//   </Button>
+//   <Dialog open={open} handler={} size={"xl"}>
+//     <CheckOut handler={}/>
+//   </Dialog>
+// </div>
+// </div>;
+
 export default function Home() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    const videoElement = document.getElementById('video') as HTMLVideoElement;
+
+    if (videoElement) {
+      if (isPlaying) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+    }
+  }, [isPlaying]);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <main className={styles.main}>
       <Header></Header>
       <section className={styles.Hero}>
-          <div className={styles.heroContainer}>
-            <div className={styles.heroContent}>
-              <h1>
-              Get <br />
-              Weekend <br />
-              Special at ₹69 
-              </h1>
-              <h4>
-                Craving something new every day? Vookad constantly introduces new chefs and dishes, so you&apos;ll never run out of delectable options.
-              </h4>
-              <Button onClick={handleOpen} className={`rounded-full bg-yellow ${styles.cta}`}>
-                Buy Now
-              </Button>
-              <Dialog open={open} handler={handleOpen} size={"xl"}>
-                <CheckOut handler={handleOpen}/>
-              </Dialog>
-            </div>
-          </div>
+        <div>
+          <video id="video" style={{width:"100vw", height:"85vh",margin:"auto", objectFit:"cover", maxWidth:800}} loop>
+            <source src="assets/video/comingmHD.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
       <section className={styles.about}>
         <div className={styles.aboutContainer}>

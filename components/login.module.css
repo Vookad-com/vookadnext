@@ -133,7 +133,7 @@
 .captcha{
 
     display: inherit;
-    visibility: hidden;
+    /* visibility: hidden; */
 
 }
 @media screen and (max-width: 1000px){
