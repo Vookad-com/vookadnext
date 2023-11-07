@@ -191,21 +191,14 @@ function FAQAcc() {
 export default function Home() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
-  const [url, setUrl] = useState(comingL);
-
-  useEffect(() => {
-    if(screen.width < 500){
-      setUrl(comingM);
-    }
-  }, []);
-
   
 
   return (
     <main className={styles.main}>
       <Header></Header>
       <section className={styles.Hero}>
-        <Image className={styles.coming} src={url} alt='coming soon'/>
+        <Image className={styles.comingL} src={comingL} alt='coming soon'/>
+        <Image className={styles.comingM} src={comingM} alt='coming soon'/>
       </section>
       <section className={styles.about}>
         <div className={styles.aboutContainer}>

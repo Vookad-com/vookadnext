@@ -7,10 +7,13 @@
     padding: 2rem;
 }
 
-.coming{
+.comingL, .comingM{
     width: 100vw;
     object-fit: cover;
     height: 85vh;
+}
+.comingM{
+    display:none;
 }
 
 .heroContainer{
@@ -91,6 +94,12 @@
     .heroContainer{
         background-size: 150% auto;
         background-position: top;
+    }
+    .comingM{
+        display: block;
+    }
+    .comingL{
+        display: none;
     }
   }  
 
