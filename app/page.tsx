@@ -19,7 +19,8 @@ import {
 } from "@material-tailwind/react";
 
 import CheckOut from '@/components/checkout';
-
+import comingL from '@/public/assets/video/comingL.gif'
+import comingM from '@/public/assets/video/comingM.gif'
 import mughlai from '@/public/assets/image-2.webp'
 import cooks from '@/public/assets/image-3.webp'
 
@@ -190,34 +191,21 @@ function FAQAcc() {
 export default function Home() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [url, setUrl] = useState(comingL);
 
   useEffect(() => {
-    const videoElement = document.getElementById('video') as HTMLVideoElement;
-
-    if (videoElement) {
-      if (isPlaying) {
-        videoElement.play();
-      } else {
-        videoElement.pause();
-      }
+    if(screen.width < 500){
+      setUrl(comingM);
     }
-  }, [isPlaying]);
+  }, []);
 
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
+  
 
   return (
     <main className={styles.main}>
       <Header></Header>
       <section className={styles.Hero}>
-        <div>
-          <video id="video" style={{width:"100vw", height:"85vh",margin:"auto", objectFit:"cover", maxWidth:800}} loop>
-            <source src="assets/video/comingmHD.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <Image className={styles.coming} src={url} alt='coming soon'/>
       </section>
       <section className={styles.about}>
         <div className={styles.aboutContainer}>

@@ -7,6 +7,12 @@
     padding: 2rem;
 }
 
+.coming{
+    width: 100vw;
+    object-fit: cover;
+    height: 85vh;
+}
+
 .heroContainer{
     border-radius: 25px;
     background-color: antiquewhite;
