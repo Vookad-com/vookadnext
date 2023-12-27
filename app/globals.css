@@ -63,3 +63,24 @@ footer{
     border-radius: 600px !important;
   }
 }
+.legal{
+  padding: 10px;
+}
+.legal h1{
+  font-weight: 600;
+  font-size: 3rem;
+  padding: 5px 0;
+}
+.legal h2{
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 5px 0;
+}
+
+.legal{
+  padding: 10px;
+}
+
+.legal p, .legal ul{
+  padding: 10px;
+}

@@ -169,24 +169,6 @@ function FAQAcc() {
   );
 }
 
-// const oldbanner = <div className={styles.heroContainer}>
-// <div className={styles.heroContent}>
-//   <h1>
-//   Get <br />
-//   Weekend <br />
-//   Special at ₹69 
-//   </h1>
-//   <h4>
-//     Craving something new every day? Vookad constantly introduces new chefs and dishes, so you&apos;ll never run out of delectable options.
-//   </h4>
-//   <Button onClick={} className={`rounded-full bg-yellow ${styles.cta}`}>
-//     Buy Now
-//   </Button>
-//   <Dialog open={open} handler={} size={"xl"}>
-//     <CheckOut handler={}/>
-//   </Dialog>
-// </div>
-// </div>;
 
 export default function Home() {
   const [open, setOpen] = React.useState(false);
@@ -197,8 +179,23 @@ export default function Home() {
     <main className={styles.main}>
       <Header></Header>
       <section className={styles.Hero}>
-        <Image className={styles.comingL} src={comingL} alt='coming soon'/>
-        <Image className={styles.comingM} src={comingM} alt='coming soon'/>
+        {/* <Image className={styles.comingL} src={comingL} alt='coming soon'/>
+        <Image className={styles.comingM} src={comingM} alt='coming soon'/> */}
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContent}>
+            <h1>
+            Get <br />
+            Weekend <br />
+            Special at ₹69 
+            </h1>
+            <h4>
+              Craving something new every day? Vookad constantly introduces new chefs and dishes, so you&apos;ll never run out of delectable options.
+            </h4>
+            <Button className={`rounded-full bg-yellow ${styles.cta}`}>
+              Buy Now
+            </Button>
+          </div>
+        </div>
       </section>
       <section className={styles.about}>
         <div className={styles.aboutContainer}>

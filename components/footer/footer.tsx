@@ -108,9 +108,9 @@ export default function Footer() {
             <div className={`col-span-2 ${styles.terms}`}>
                 <ul className={styles.Flex}>
                     <li className={styles.Flexitem}><Link href={'#'}>Press release</Link></li>
-                    <li className={styles.Flexitem}><Link href={'#'}>Regulatory</Link></li>
-                    <li className={styles.Flexitem}><Link href={'#'}>Policies</Link></li>
-                    <li className={styles.Flexitem}><Link href={'#'}>Terms & conditions</Link></li>
+                    <li className={styles.Flexitem}><Link href={'refund-policy'}>Refund Policy</Link></li>
+                    <li className={styles.Flexitem}><Link href={'/privacy-policy'}>Privacy Policy</Link></li>
+                    <li className={styles.Flexitem}><Link href={'/terms-and-conditions'}>Terms & conditions</Link></li>
                 </ul>
             </div>
         </div>
