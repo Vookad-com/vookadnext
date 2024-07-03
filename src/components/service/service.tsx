@@ -5,21 +5,29 @@ import meal_i from "./assets/meal.png";
 import popcorn_i from "./assets/popcorn.png";
 import packet_i from "./assets/packet.png";
 import Cat_Card2 from "./card";
+import for_i from "./assets/for.png";
+import subs_i from "./assets/dishes.png";
+import Image from "next/image";
 export default function Service(){
     return (
-        <section style={{
-            backgroundColor: "#F6F2EF"
-        }} className="w-full">
-            <div className="container">
-                <div className="text-center">
-                    <HeadingL>How We Serve <Orange>Serve</Orange> You</HeadingL>
+        <>
+            <section  className="w-full overflow-visible relative sm:mb-[15%] flex">
+                <div className="w-5/6 m-auto p-2 py-6 rounded-xl bg-[#F8EA65] min-h-[15rem] h-5/6 relative">
+                    <HeadingL>Your <br /> Healthy <Orange>Meal</Orange> Partner</HeadingL>
+
                 </div>
-                <div className="grid grid-cols-3 gap-4 justify-around max-w-screen-md m-auto">
-                    <Cat_Card2 description="100% environment friendly packaging" text="Automated Packaging" img={packet_i}></Cat_Card2>
-                    <Cat_Card2 description="We deliver the best experiences" text="We deliver the best experiences" img={meal_i}></Cat_Card2>
-                    <Cat_Card2 description="Promise to deliver within 30mins" text="Serve hot Appetite" img={popcorn_i}></Cat_Card2>
+                <div className="absolute  sm:top-3/4 right-0 -bottom-[20%] sm:bottom-[unset] md:right-[2%] z-10 w-full flex  justify-end origin-bottom-right">
+                    <Image className=" object-contain max-w-md sm:scale-125 w-5/6 origin-bottom-right rounded-lg" src={for_i} alt="serving Hundreds of happy customers daily" />
                 </div>
-            </div>
-        </section>
+            </section>
+            <section  className="w-full overflow-visible relative mt-[30%]">
+                <div className="w-5/6 flex items-end justify-end m-auto p-2 py-6 rounded-xl bg-[#FB6107] min-h-[15rem] h-5/6 relative text-white">
+                    <HeadingL>Best Seller Subscriptions*</HeadingL>
+                </div>
+                <div className="absolute  sm:bottom-1/4 left-0 bottom-[40%] sm:top-[unset] md:left-[2%] z-10 w-full flex  justify-start origin-bottom-left">
+                    <Image className=" object-contain max-w-md sm:scale-125 -translate-x-3 w-5/6 origin-bottom-left rounded-lg" src={subs_i} alt="serving Hundreds of happy customers daily" />
+                </div>
+            </section>
+        </>
     )
 }

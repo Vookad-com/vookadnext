@@ -1,7 +1,7 @@
 import Header from "@/components/header/header";
 import Hero from "@/components/hero/hero";
 import Image from "next/image";
-import AppImg from "@/components/h23btg4n.png"
+import AppImg from "@/components/banner.png"
 import Categories from "@/components/categories/categories";
 import fastest from "./fastest.png";
 import Service from "@/components/service/service";
@@ -11,11 +11,21 @@ export default function Home() {
     <main className="">
       <Header></Header>
       <Hero></Hero>
-      <Image src={AppImg} className="max-w-screen-lg mx-auto my-8" alt="Download vookad app"></Image>
       <Categories />
-      <Image src={fastest} className="w-full" alt="fastest delivery vookad" ></Image>
+      <div className="my-8">
+        <Image src={AppImg} className="max-w-screen-md mx-auto w-full" alt="Download vookad app"></Image>
+        <h4 className="text-sm text-center">
+          *recognised by startupindia and startupodisha
+        </h4>
+      </div>
       <Service></Service>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
+      <div className="my-8">
+        <Image src={AppImg} className="max-w-screen-md mx-auto w-full" alt="Download vookad app"></Image>
+        <h4 className="text-sm text-center">
+          *recognised by startupindia and startupodisha
+        </h4>
+      </div>
       <footer style={{
         background: "url('/bg.png') green"
       }} className="h-[20rem] relative">
