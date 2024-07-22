@@ -1,6 +1,6 @@
 .footerContainer{
     width: 95%;
-    max-width: 90rem;
+    max-width: 75rem;
     margin: auto;
 }
 
@@ -37,15 +37,16 @@
 
 .copyright{
     display: flex;
-    align-items: center;
-    padding: 1rem;
+    align-items: first baseline;
+    padding: 1rem 0;
     gap: 1rem;
     flex-wrap: wrap;
 }
 .copyright img{
     flex: 2%;
     height: 3rem;
-    padding: 5px;
+    transform: translateY(.5rem);
+    /* padding: 5px; */
 }
 .copyright > div{
     flex: 40%;

@@ -11,7 +11,7 @@ export default function Footer() {
         <div className={`${styles.sitemap} grid md:grid-cols-5 gap-2 grid-cols-2`}>
           <div className={`${styles.siteCol}`}>
             <h4>
-              Our Suffering
+              Our offering
             </h4>
             <ul>
               <li>
@@ -27,7 +27,7 @@ export default function Footer() {
                 <Link href={`#`}>Docs</Link>
               </li>
               <li>
-                <Link href={`#`}>Carrers</Link>
+                <Link href={`#`}>Carriers</Link>
               </li>
             </ul>
           </div>

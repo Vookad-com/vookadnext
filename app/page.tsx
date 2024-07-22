@@ -26,55 +26,30 @@ import cooks from '@/public/assets/image-3.webp'
 
 const diffArr = [
   {
-    ico: 'assets/tune.svg',
-    title: 'Tune',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    ico: 'assets/tune.svg',
-    title: 'Tune',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    ico: 'assets/tune.svg',
-    title: 'Tune',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    ico: 'assets/tune.svg',
-    title: 'Tune',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    ico: 'assets/tune.svg',
-    title: 'Tune',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    ico: 'assets/tune.svg',
-    title: 'Tune',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    ico: 'assets/rupee.svg',
+    title: 'Autopay',
+    text: 'No tracking due date or recharge date, no entering details every month, and yet, clear your dues on time Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];
 
 const plans = [
   {
-    title: '₹69/day',
-    under: '',
-    list: ['Homemade','Healthy','Delicious'],
-    button: 'Check Plans',
+    title: 'Desi Meals',
+    under: 'Starting from ₹69/day',
+    list: ['Healthy home-cooked meal','No Palm-oil and preservatives. Cooked with less oil and spices.','Regularly updated menu synced to seasonal variations Veg/Non-veg options available'],
+    button: 'Check for Plans',
   },
   {
-    title: '₹69/day',
-    under: '',
-    list: ['Homemade','Healthy','Delicious'],
-    button: 'Check Plans',
+    title: 'Desi Foods',
+    under: 'Taste of home, Away from home',
+    list: ['Order from wide variety of menu','Healthy, hygeinic preparation. No palm-oil. Cooked with sunflower/mustard oil','Slot wise delivery. Pocket friendly prices. Starting from Rs. 49'],
+    button: 'Why wait..! Try Now.',
   },
   {
-    title: '₹69/day',
-    under: '',
-    list: ['Homemade','Healthy','Delicious'],
-    button: 'Check Plans',
+    title: 'Desi products',
+    under: 'Homemade snacks and spices',
+    list: ['Best quality homemade packaged food products.','Best of traditional kitchen spices','Enjoy homemade desi snacks from every corner of the state', 'Prepared and processed with high quality healthy ingredients'],
+    button: 'Explore our desi snacks !',
   },
 ];
 
@@ -171,10 +146,6 @@ function FAQAcc() {
 
 
 export default function Home() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(!open);
-  
-
   return (
     <main className={styles.main}>
       <Header></Header>
@@ -184,15 +155,15 @@ export default function Home() {
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
             <h1>
-            Get <br />
-            Weekend <br />
-            Special at ₹69 
+            ODISHA’s
+            Homemade 
+            Food App 
             </h1>
             <h4>
               Craving something new every day? Vookad constantly introduces new chefs and dishes, so you&apos;ll never run out of delectable options.
             </h4>
-            <Button className={`rounded-full bg-yellow ${styles.cta}`}>
-              Buy Now
+            <Button className={`uppercase rounded-full font-bold bg-yellow ${styles.cta}`}>
+              Download the app
             </Button>
           </div>
         </div>
@@ -202,20 +173,19 @@ export default function Home() {
           <div className={styles.aboutCard1}>
             <div className={styles.content}>
               <h2>
-                  Chiken Kassa <br />
-                  Now Available
+                Fastest growing <span className='text-[var(--pink)]'>Homechef</span> Network
               </h2>
-              <p>A decadent dish with smoky and melt in the mouth chicken pieces simmered in a rich gravy.</p>
+              <p>We are adding new home kitchens everyday to serve your diversified cravings and deliver to as we can.</p>
             </div>
             <div className={styles.imgContainer}>
               <Image src={mughlai} alt="Mughlai Platters" />
             </div>
           </div>
-          <div className={styles.aboutCard2}>
+          <div className={styles.aboutCard1}>
             <div className={styles.content}>
                 <h2>
-                  Know about our <br />
-                  Super Cooks!
+                  <span className='text-[var(--pink)] mr-3'>One App as your</span>
+                  foodie-buddy
                 </h2>
                 <p>Moms are our Super cooks, They add hero icredients to our food.</p>
               </div>
@@ -273,12 +243,13 @@ export default function Home() {
       <section className={styles.plans}>
         <div className={styles.plansContainer}>
           <h2>
-            Choose a plan as per your needs
+            Every-dabba pocket friendly
           </h2>
           <div className={`${styles.cards2} grid grid-cols-1 gap-4 md:grid-cols-3 `}>
               {plans.map((plan,i) => {
                 return (
                   <div className={styles.card2} key={i}>
+                    <div>
                     <div className={styles.heading}>
                       <h3>{plan.title}</h3>
                       <small>{plan.under}</small>
@@ -293,7 +264,8 @@ export default function Home() {
                         )
                       })}
                     </ol>
-                    <Button className={`rounded-full bg-pink ${styles.cta2}`}>
+                    </div>
+                    <Button className={`rounded-full  bg-pink ${styles.cta2}`}>
                       {plan.button}
                     </Button>
                   </div>

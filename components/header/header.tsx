@@ -10,17 +10,20 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import styles from './header.module.css';
-import { useSelector } from 'react-redux';
 import { auth } from "@/firebase/config";
 import { signOut } from "firebase/auth";
 
 export default function Header() {
   const [openNav, setOpenNav] = useState(false);
-  const Nauth = useSelector((state:any) => state.authCheck.auth);
-
+  const [user, setUser] = useState(auth.currentUser);
   function logout(){
     signOut(auth)
 }
+useEffect(()=>{
+  auth.onIdTokenChanged((e)=>{
+    setUser(e)
+  })
+})
  
   useEffect(() => {
     window.addEventListener("resize", () => window.innerWidth >= 960 && setOpenNav(false));
@@ -116,7 +119,7 @@ export default function Header() {
             <div className="hidden lg:block">{navList}</div>
         </div>
         {
-          Nauth? <Button onClick={logout} >Logout</Button>: <Link href={`/login`} className="mb-2">
+          user? <Button onClick={logout} >Logout</Button>: <Link href={`/login`} className="mb-2">
           <span><Image src={`/assets/userico.svg`} width={20} height={20} alt={`login`}/></span>
       </Link>
         }

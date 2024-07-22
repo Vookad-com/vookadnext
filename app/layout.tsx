@@ -1,4 +1,3 @@
-'use client'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import store from '@/redux/store'
@@ -20,7 +19,7 @@ export default function RootLayout({
         </title>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className={inter.className}><Provider store={store}>{children}</Provider></body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

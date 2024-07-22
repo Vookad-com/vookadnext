@@ -47,8 +47,8 @@ footer{
 
 @media screen and (max-width: 550px){
   :root {
-    --fontsize: 2rem;
-    --big: 2rem;
+    --fontsize: 2.5rem;
+    --big: 2.5rem;
     --spacing: -2px;
   }
 

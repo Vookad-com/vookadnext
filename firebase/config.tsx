@@ -22,43 +22,43 @@ const firebaseConfig = {
 
 // Initialize Firebase
 let firebase_app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-console.debug("Yo");
+// console.debug("Yo");
 
 export const db = getFirestore(firebase_app);
 export const auth = getAuth(firebase_app);
 export const storage = getStorage(firebase_app);
 
-onAuthStateChanged(auth, async (user) => {
-    console.debug("Checking Auth State")
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
-        const uid = user.uid;
-        try {
-          const docref = doc(db, 'users', uid);
-          console.log('authenticated')
-          const docSnap = await getDoc(docref);
-          if(!docSnap.exists()) {
-            return;
-          }
-          store.dispatch(authCheckSlice.actions.load({
-              auth: true,
-              name: docSnap.data().name,
-              email: docSnap.data().email,
-              phone: docSnap.data().phone,
-              id: docSnap.id,
-          }))
-        } catch (error) {
+// onAuthStateChanged(auth, async (user) => {
+//     console.debug("Checking Auth State")
+//     if (user) {
+//       // User is signed in, see docs for a list of available properties
+//       // https://firebase.google.com/docs/reference/js/auth.user
+//         const uid = user.uid;
+//         try {
+//           const docref = doc(db, 'users', uid);
+//           console.log('authenticated')
+//           const docSnap = await getDoc(docref);
+//           if(!docSnap.exists()) {
+//             return;
+//           }
+//           store.dispatch(authCheckSlice.actions.load({
+//               auth: true,
+//               name: docSnap.data().name,
+//               email: docSnap.data().email,
+//               phone: docSnap.data().phone,
+//               id: docSnap.id,
+//           }))
+//         } catch (error) {
           
-        }
-      // ...
-    } else {
-      store.dispatch(authCheckSlice.actions.load({
-        auth: false,
-        name: '',
-        email: '',
-        phone: '',
-        id: '',
-      }))
-    }
-  });
+//         }
+//       // ...
+//     } else {
+//       store.dispatch(authCheckSlice.actions.load({
+//         auth: false,
+//         name: '',
+//         email: '',
+//         phone: '',
+//         id: '',
+//       }))
+//     }
+//   });

@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useSelector } from 'react-redux';
 import { addDoc, collection } from 'firebase/firestore';
 import styles from '@/components/landing.module.css'
-import { db } from '@/firebase/config';
+import { db } from '@/app/firebase/config';
 import React from 'react';
 interface checkoutPrs {
     handler: () => void;

@@ -56,7 +56,7 @@ export default function Login() {
                     Manage your healthy Life with Vookad
                 </h2>
                 <div className={styles.card2}>
-                    <ol>
+                    {/* <ol>
                       {plan.list.map((item,i) => {
                         return (
                           <li key={i}>
@@ -65,7 +65,7 @@ export default function Login() {
                           </li>
                         )
                       })}
-                    </ol>
+                    </ol> */}
                   </div>
             </div>
             <LoginBox />
