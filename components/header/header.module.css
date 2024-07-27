@@ -5,6 +5,14 @@
 .wrapper{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    border-top-right-radius: 600rem;
+    border-bottom-right-radius: 600rem;
+    background-color: var(--orange);
+    padding: 1rem;
+    padding-left: 2rem;
+    width: 25%;
+    max-width: 12rem;
     gap: 3rem;
 }
 
@@ -19,5 +27,9 @@
     .container{
         display: flex;
         align-items: center;
+    }
+    .wrapper{
+        min-width: 40%;
+        max-width: unset;
     }
 }

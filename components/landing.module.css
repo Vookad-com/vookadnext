@@ -4,7 +4,7 @@
     margin: auto;
     max-width: 80rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .comingL, .comingM{
@@ -29,6 +29,7 @@
 .heroContent{
     width: 60%;
     padding: 5%;
+    padding-bottom: 2%;
     background-image: url('/assets/pinkGola.svg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -39,6 +40,7 @@
     line-height: var(--big);
     letter-spacing: var(--spacing);
     font-weight: 900;
+    color: var(--yellow);
 }
 
 .heroContent h4{
@@ -83,7 +85,8 @@
   @media screen and (max-width: 600px){
     .heroContent{
         width: 100%;
-        height: 50vh;
+        height: 45vh;
+        text-align: center;
         background-size: 100% 100%;
         background-position: 50% 50%;
         display: flex;
@@ -94,7 +97,7 @@
     .heroContainer{
         background-size: 150% auto;
         background-position: top;
-        height: 85dvh;
+        height: 75dvh;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
@@ -110,7 +113,7 @@
   @media screen and (max-width: 400px){
     .heroContent{
         width: 100%;
-        height: 105%;
+        /* height: 42vh; */
         /* padding-top: 5%; */
         background-size: 100% 100%;
         background-position: 50% 50%;
@@ -132,7 +135,7 @@
 }
 .about{
     width: 100%;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 .aboutContainer{
     width: 100%;
@@ -144,7 +147,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--yellow);
+    color: #000;
     gap: 5rem;
     margin: 1rem auto;
 }
@@ -154,7 +157,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row-reverse;
-    color: var(--pink);
+    color: var(--orange);
     gap: 5rem;
     margin: 1rem auto;
 }
@@ -170,7 +173,7 @@
 }
 
 .content p{
-    color: #fff;
+    color: #000;
     margin-top: 2rem;
 }
 .imgContainer{
@@ -215,7 +218,7 @@
     font-weight: 900;
     letter-spacing: var(--spacing);
     line-height: var(--fontsize);
-    color: var(--yellow);
+    color: #000;
     margin: 1rem 0;
 }
 
@@ -234,7 +237,8 @@
 
 .card h3{
     font-size: 1.3rem;
-    color: var(--yellow);
+    font-weight: 600;
+    /* color: var(--yellow); */
     letter-spacing: -1px;
 }
 
@@ -269,7 +273,8 @@
     font-size: var(--fontsize);
     font-weight: 900;
     letter-spacing: var(--spacing);
-    color: var(--yellow);
+    line-height: 2.5rem;
+    /* color: var(--yellow); */
     margin: 1rem 0;
 }
 
@@ -280,6 +285,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #fff;
 }
 .card2 .heading{
     border-bottom: 2px solid #fff;
@@ -292,6 +298,10 @@
     line-height: var(--fontsize);
 }
 
+.card2 small{
+    color: var(--yellow);
+}
+
 .card2 ol{
     margin: 1rem 0;
 
@@ -302,6 +312,55 @@
     align-items: center;
     gap: 1rem;
     margin: .5rem 0;
+}
+/* .card2:nth-child(2){
+    display: none;
+    background-color: #1E1E1E;
+    border-radius: 25px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+} */
+.card2:nth-child(2){
+    background-color: var(--orange);
+    border-radius: 25px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+.card2:nth-child(2) .heading{
+    border-bottom: 2px solid #fff;
+    padding: .5rem 0;
+}
+.card2:nth-child(2) h3{
+    font-size: var(--fontsize);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: var(--fontsize);
+}
+
+.card2:nth-child(2) small{
+    color: #fff;
+}
+
+.card2:nth-child(2) ol{
+    margin: 1rem 0;
+
+}
+
+.card2:nth-child(2) ol li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0;
+}
+.card2:nth-child(2) button{
+    background-color: #fff;
+    color: var(--orange);
 }
 
 .cta2{
@@ -327,13 +386,13 @@
     font-size: var(--fontsize);
     font-weight: 900;
     letter-spacing: var(--spacing);
-    color: var(--yellow);
+    /* color: var(--yellow); */
     margin: 1rem 0;
 }
 
 .faqItem{
-    background-color: #000 !important;
-    color: #fff !important;
+    background-color: #fff !important;
+    color: #000 !important;
     border-bottom: #fff 2px solid !important;
     padding: 1rem !important;
 }
@@ -352,6 +411,6 @@
     font-size: var(--fontsize);
     font-weight: 900;
     letter-spacing: var(--spacing);
-    color: var(--yellow);
+    color: var(--orange);
     margin: 1rem 0;
 }

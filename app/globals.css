@@ -8,6 +8,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --yellow: #F8EA65;
+  --orange: #FF5021;
   --pink: #F178B6;
   --fontsize: 3.5rem;
   --big: 4rem;
@@ -24,18 +25,19 @@
   }
 }
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    overflow: visible;
 }
 
 footer{
   background-color: #1E1E1E;
-  width: 100%;
+  width: 100vw;
 }
 
 @media screen and (max-width: 900px){
@@ -54,11 +56,11 @@ footer{
 
   
   .swiper-pagination-bullet{
-    background: #fff!important;
+    background: #000 !important;
     opacity: 1;
   }
   .swiper-pagination-bullet-active{
-    background: var(--yellow)!important;
+    background: #000 !important;
     width: 1.5rem !important;
     border-radius: 600px !important;
   }
