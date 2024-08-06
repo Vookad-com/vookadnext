@@ -6,7 +6,7 @@ export async function GET(request: NextRequest, res: NextResponse) {
     const category = searchParams.get("category")
     if(category){
         let data = products.filter(e => e.category == category);
-        return data
+        return Response.json(data)
     }
-    return products
+    return Response.json(products)
   }
