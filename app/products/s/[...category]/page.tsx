@@ -1,12 +1,12 @@
 import Footer from '@/components/footer/footer';
 import Header from '@/components/header/header';
 import styles from '@/components/landing.module.css'
-import { product } from '../../products';
+import { product, products } from '../../products';
 import PdtCard from '../../pdtCard';
 const url = process.env.NEXT_PUBLIC_API || "http://localhost:3000"
 const Products = async ({params:{category}}:{params:{category:string}}) =>{
     const res = await fetch(url+"/products/api?category="+category)
-    const data:product[] = await res.json()
+    const data = products.filter(e => e.category == category)
     return (
         <main className={styles.main}>
             <Header></Header>

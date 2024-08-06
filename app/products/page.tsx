@@ -1,7 +1,7 @@
 import Footer from '@/components/footer/footer';
 import Header from '@/components/header/header';
 import styles from '@/components/landing.module.css'
-import { product } from './products';
+import { product, products } from './products';
 import Image from 'next/image';
 import veg_i from './images/veg.svg'
 import nonveg_i from './images/non-veg.svg'
@@ -10,8 +10,7 @@ import PdtCard from './pdtCard';
 
 const url = process.env.NEXT_PUBLIC_API || "http://localhost:3000"
 const Products = async () =>{
-    const res = await fetch(url+"/products/api")
-    const data:product[] = await res.json()
+    const data:product[] = products
     return (
         <main className={styles.main}>
             <Header></Header>
