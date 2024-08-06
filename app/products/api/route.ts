@@ -6,7 +6,23 @@ export async function GET(request: NextRequest, res: NextResponse) {
     const category = searchParams.get("category")
     if(category){
         let data = products.filter(e => e.category == category);
-        return Response.json(data)
+        return new Response(
+            JSON.stringify(data),
+            {
+              status: 200,
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }
+          );
     }
-    return Response.json(products)
+    return new Response(
+        JSON.stringify(products),
+        {
+          status: 200,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
   }
