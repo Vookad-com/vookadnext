@@ -105,7 +105,7 @@ export default function Footer() {
             <div className={styles.copyrightText}>
                 Copyright © 2023 Neuvision Technologies Pvt. Ltd. All rights reserved.
             </div>
-            <div className={`col-span-2 ${styles.terms}`}>
+            <div className={`col-span-2 ${styles.terms} text-white`}>
                 <ul className={styles.Flex}>
                     <li className={styles.Flexitem}><Link href={'#'}>Press release</Link></li>
                     <li className={styles.Flexitem}><Link href={'refund-policy'}>Refund Policy</Link></li>

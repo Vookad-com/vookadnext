@@ -24,6 +24,7 @@ import comingL from '@/public/assets/video/comingL.gif'
 import comingM from '@/public/assets/video/comingM.gif'
 import mughlai from '@/public/assets/image-2.webp'
 import cooks from '@/public/assets/image-3.webp'
+import startup from "./startupIndia.png";
 
 const diffArr = [
   {
@@ -36,6 +37,7 @@ const diffArr = [
 const plans = [
   {
     title: 'Desi Meals',
+    link: "/products/s/desiMeals",
     under: 'Starting from ₹69/day',
     list: ['Healthy home-cooked meal','No Palm-oil and preservatives. Cooked with less oil and spices.','Regularly updated menu synced to seasonal variations Veg/Non-veg options available'],
     button: 'Check for Plans',
@@ -43,12 +45,14 @@ const plans = [
   {
     title: 'Desi Foods',
     under: 'Taste of home, Away from home',
+    link: "/products/s/desiFoods",
     list: ['Order from wide variety of menu','Healthy, hygeinic preparation. No palm-oil. Cooked with sunflower/mustard oil','Slot wise delivery. Pocket friendly prices. Starting from Rs. 49'],
     button: 'Why wait..! Try Now.',
   },
   {
     title: 'Desi products',
     under: 'Homemade snacks and spices',
+    link: "/products/s/desiProducts",
     list: ['Best quality homemade packaged food products.','Best of traditional kitchen spices','Enjoy homemade desi snacks from every corner of the state', 'Prepared and processed with high quality healthy ingredients'],
     button: 'Explore our desi snacks !',
   },
@@ -195,7 +199,7 @@ export default function Home() {
         </div>
         <div className='text-center mt-4'>
           Recognised by: <br />
-          <Image className='m-auto' src={"/assets/startupindia.png"} height={60} width={150} alt='startup India'></Image>
+          <Image className='m-auto' src={startup} height={60} width={150} alt='startup India'></Image>
         </div>
       </section>
       <section className={styles.about}>
@@ -295,9 +299,11 @@ export default function Home() {
                       })}
                     </ol>
                     </div>
-                    <Button className={`rounded-full  bg-[var(--orange)] ${styles.cta2}`}>
-                      {plan.button}
-                    </Button>
+                    <Link href={plan.link}>
+                      <Button className={`rounded-full  bg-[var(--orange)] ${styles.cta2}`}>
+                        {plan.button}
+                      </Button>
+                    </Link>
                   </div>
                 )
               })}

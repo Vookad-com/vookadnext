@@ -132,6 +132,8 @@
     font: 1em 600;
     margin-top: 2rem;
     color: #000;
+    /* width: 100%; */
+    /* background: #fff; */
 }
 .about{
     width: 100%;

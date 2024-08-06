@@ -4,7 +4,6 @@ import {
   Navbar,
   Collapse,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import Image from "next/image";
@@ -14,12 +13,25 @@ import { auth } from "@/firebase/config";
 import { signOut } from "firebase/auth";
 import ham from "./ham.webp";
 
+import { Label } from "@/components/ui/label"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
+
 export default function Header() {
   const [openNav, setOpenNav] = useState(false);
   const [user, setUser] = useState(auth.currentUser);
-  function logout(){
-    signOut(auth)
-}
+  const logout = () => {
+      signOut(auth)
+  }
 useEffect(()=>{
   auth.onIdTokenChanged((e)=>{
     setUser(e)
@@ -82,20 +94,41 @@ useEffect(()=>{
             <Link className="mr-4" href={`/`}><Image className={styles.brand} width={100} height={48} src={`/assets/vookad.svg`} alt={`Vookad`}/></Link>
             {/* <div className="hidden lg:block">{navList}</div> */}
         </div>
-        <button className="px-4 mr-4">
-          <Image src={ham} width={50} height={50} alt="Ham" />
-        </button>
-        {/* {
-          user? <Button onClick={logout} >Logout</Button>: <Link href={`/login`} className="mb-2">
-          <span><Image src={`/assets/userico.svg`} width={20} height={20} alt={`login`}/></span>
-      </Link>
-        } */}
+        <Sheet>
+          <SheetTrigger>
+              <button className="px-4 mr-4 rounded-xl">
+              <Image src={ham} width={50} className=" rounded-xl" height={50} alt="Ham" />
+              </button>
+          </SheetTrigger>
+          <SheetContent className="">
+            <SheetHeader>
+              <SheetTitle>Links</SheetTitle>
+            </SheetHeader>
+            <div className="py-4">
+              <ul className="grid grid-cols-1 gap-5">
+                <li>
+                  <Link href={`/`}>Home</Link>
+                </li>
+                <li>
+                  <Link href={`/products/`}>Our products</Link>
+                </li>
+                <li>
+                  <Link href={`/about-us`}>About us</Link>
+                </li>
+                <li>
+                  <Link href={`/refund-policy`}>Refund policy</Link>
+                </li>
+                <li>
+                  <Link href={`/privacy-policy`}>Privacy policy</Link>
+                </li>
+                <li>
+                  <Link href={`/terms-and-conditions`}>Terms & conditions</Link>
+                </li>
+              </ul>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
-      <Collapse open={openNav} className={styles.mobilNav}>
-        { openNav && <div className={`container mx-auto ${styles.mobileItem}`}>
-          {navList}
-        </div>}
-      </Collapse>
     </Navbar>
   );
 }
