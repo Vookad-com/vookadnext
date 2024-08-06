@@ -17,7 +17,7 @@ const Products = async () =>{
             <h1 className='text-3xl font-bold p-5 max-w-5xl grid grid-cols-3 m-auto gap-5'>
                 All Products
             </h1>
-            <section className='p-5 max-w-5xl grid grid-cols-3 m-auto gap-5'>
+            <section className='p-5 max-w-5xl grid md:grid-cols-3 grid-cols-2 m-auto gap-5'>
                 {
                     data.map((e,i) =><PdtCard pdt={e} key={i} />)
                 }
